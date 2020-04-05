@@ -972,9 +972,9 @@ accepts@~1.3.7:
     negotiator "0.6.2"
 
 acorn@^6.2.1:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
-  integrity sha512-gac8OEcQ2Li1dxIEWGZzsp2BitJxwkwcOm0zHAJLcPJaVvm58FRnk6RkuLRpU1EujipU2ZFODv2P9DLMfnV8mw==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 aggregate-error@^3.0.0:
   version "3.0.1"
@@ -3105,6 +3105,11 @@ is-accessor-descriptor@^1.0.0:
   dependencies:
     kind-of "^6.0.0"
 
+is-any-array@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/is-any-array/-/is-any-array-0.0.3.tgz#cbdd8c7189d47b53b050969245f4ef7e55550b9b"
+  integrity sha512-Lr5SRykZv6uuYMZURz7+YpigT1ziTBHOTgFJ1zK7gL+9Wbet5Ha1ws6S84Jo/lH4zep02b95sk6o4+MTk97mPQ==
+
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -3827,6 +3832,58 @@ mixin-deep@^1.2.0:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+ml-array-max@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ml-array-max/-/ml-array-max-1.1.2.tgz#ac14a4954ebdb9f401774cc1572fce439e12f94d"
+  integrity sha512-it2hYUSuYEwIRO6hjTWfe6gbGutF4Tuct7jxt3LiLE4wKFs6ku5FLNIRKtOL2jyH+Jdwt1ddbqKMX8inBM8RxA==
+  dependencies:
+    is-any-array "^0.0.3"
+
+ml-array-mean@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ml-array-mean/-/ml-array-mean-1.1.2.tgz#99e5115bbc1e2daa1cd02ebde08e52e79a5caae2"
+  integrity sha512-ZKvHXM/5ULWF83aF654X9yO4YcOzneaLCmokcrEmNtvqAaz4n9PBvu5JHZrDGYAZ9tSs+c5OYgE1Lx+YL6q90g==
+  dependencies:
+    ml-array-sum "^1.1.2"
+
+ml-array-min@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ml-array-min/-/ml-array-min-1.1.2.tgz#a084370fe78998a4131d566d066ee01bccce253a"
+  integrity sha512-92QzvsyK7TxGz618pno6bu0LXYcRKssbimP85qRllk2xX5Z4gnVxlOmrMjSerUut9zzbt1eQB4byXNCwT0vgwA==
+  dependencies:
+    is-any-array "^0.0.3"
+
+ml-array-rescale@^1.2.2:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/ml-array-rescale/-/ml-array-rescale-1.3.0.tgz#424baa931d4b874b18f4a8e52957c7d6deb29ddc"
+  integrity sha512-m9IjM51dxO/j+BagsDZlaRkHLWARWBbl+LMAzrTSYZ76IZgwTQGgEImsURCEC0gNMGREaBBTtVGfqsRqmkD5aA==
+  dependencies:
+    is-any-array "^0.0.3"
+    ml-array-max "^1.1.2"
+    ml-array-min "^1.1.2"
+
+ml-array-sum@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ml-array-sum/-/ml-array-sum-1.1.2.tgz#feb42c7845eacecbc0885eed4f1d710fe5d14570"
+  integrity sha512-APM5IvAMuEF17BxTbaRT0nWqt6h5zjcJZDCIBPrX/YKCX32u1Rfb6E26qvGvAGusHOnyqNR7ZEzD8WMWGCRS/g==
+  dependencies:
+    is-any-array "^0.0.3"
+
+ml-cart@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ml-cart/-/ml-cart-2.0.1.tgz#6d9a796828ca77cdea2299a8aa650d50a7942160"
+  integrity sha512-/aHTKMHaPVVcNnIblv3pXkisqYjcSidSlwkpTDrPAeF4F2F1SytAfSvPYHIthErQNkNqKWjYo66+7YzKcT789Q==
+  dependencies:
+    ml-array-mean "^1.1.2"
+    ml-matrix "^6.4.1"
+
+ml-matrix@^6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/ml-matrix/-/ml-matrix-6.4.1.tgz#388082df1584b34ffe14e26115dbc5f0f3312ff1"
+  integrity sha512-YZ6lLRhk80B2zJSC0bKocnHbpxCdXFKWb6A7QTDztf5ob2qL1g/5AYNAuDtCQgbZtW1wwFZbjXbDgk/UdiO3Uw==
+  dependencies:
+    ml-array-rescale "^1.2.2"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
